@@ -17,7 +17,8 @@ protoc:
 	protoc --go_opt=module=${GO_MODULE} --go_out=. \
 		--go-grpc_opt=module=${GO_MODULE}  --go-grpc_out=.\
 		./proto/hello/*.proto \
-		./proto/sherlock/*.proto
+		./proto/sherlock/*.proto \
+		./proto/bank/type/*.proto ./proto/sherlock/*.proto
 
 
 .PHONY: build
