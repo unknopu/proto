@@ -23,7 +23,7 @@ const (
 
 type SherlockRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Len           string                 `protobuf:"bytes,1,opt,name=len,proto3" json:"len,omitempty"`
+	Len           uint32                 `protobuf:"varint,1,opt,name=len,proto3" json:"len,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -58,11 +58,11 @@ func (*SherlockRequest) Descriptor() ([]byte, []int) {
 	return file_proto_sherlock_sherlock_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *SherlockRequest) GetLen() string {
+func (x *SherlockRequest) GetLen() uint32 {
 	if x != nil {
 		return x.Len
 	}
-	return ""
+	return 0
 }
 
 type SherlockResponse struct {
@@ -115,7 +115,7 @@ const file_proto_sherlock_sherlock_proto_rawDesc = "" +
 	"\n" +
 	"\x1dproto/sherlock/sherlock.proto\x12\x05hello\"#\n" +
 	"\x0fSherlockRequest\x12\x10\n" +
-	"\x03len\x18\x01 \x01(\tR\x03len\"$\n" +
+	"\x03len\x18\x01 \x01(\rR\x03len\"$\n" +
 	"\x10SherlockResponse\x12\x10\n" +
 	"\x03msg\x18\x01 \x01(\tR\x03msg2P\n" +
 	"\x0fSherlockService\x12=\n" +

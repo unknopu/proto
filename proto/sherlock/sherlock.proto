@@ -7,7 +7,7 @@ package hello;
 option go_package = "github.com/unknopu/proto/protogen/go/sherlock";
 
 message SherlockRequest { 
-  string len = 1;
+  uint32 len = 1;
 }
 
 message SherlockResponse { 
