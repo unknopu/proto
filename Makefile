@@ -18,7 +18,7 @@ protoc:
 		--go-grpc_opt=module=${GO_MODULE}  --go-grpc_out=.\
 		./proto/hello/*.proto \
 		./proto/sherlock/*.proto \
-		./proto/bank/type/*.proto ./proto/sherlock/*.proto
+		./proto/bank/type/*.proto ./proto/bank/*.proto
 
 
 .PHONY: build
