@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello;
+
+// replace this with your own github username and repo
+// github.com/<username>/<repo>/protogen/go/... 
+option go_package = "github.com/unknopu/proto/protogen/go/sherlock";
+
+message SherlockRequest { 
+  string len = 1;
+}
+
+message SherlockResponse { 
+  string msg = 1;
+}
+
+service SherlockService {
+  rpc Sherlock(SherlockRequest) returns (SherlockResponse) {}
+}
